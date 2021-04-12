@@ -1,0 +1,79 @@
+.sideBar {
+  width: 15%;
+  height: 100vh;
+  background-image: none;
+  background-color: #325b74 !important;
+  float: left;
+}
+
+.logoHeader {
+  width: 100%;
+  margin: 0 auto;
+  height: 20%;
+  border: red solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 380px;
+  height: 190px;
+}
+
+@media only screen and (max-width: 350px) {
+  .logo {
+    width: 80;
+    height: 50px;
+  }
+  .sideBar {
+    width: 15%;
+    height: 100vh;
+    background-image: none;
+    background-color: #325b74 !important;
+    float: left;
+  }
+}
+
+.navs {
+  display: flex;
+
+  margin-top: 40px;
+
+  background-image: none;
+  background-color: #325b74 !important;
+  font-size: 22px;
+  width: 100%;
+  height: max-content;
+  border: solid 1px red;
+}
+
+.item {
+  width: 100%;
+  color: white !important;
+  font-weight: 400;
+  margin-top: 30px;
+
+  cursor: pointer;
+}
+
+.itemIcon {
+  width: 37px;
+  height: 37px;
+  margin-top: 12px;
+}
+.item:hover {
+  background-color: #54647b;
+}
+
+.itemContent {
+  display: inline-flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 50px;
+  margin-right: 20px;
+}

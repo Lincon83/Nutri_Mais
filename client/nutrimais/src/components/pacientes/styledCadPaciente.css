@@ -1,0 +1,58 @@
+.form {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+ 
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+.headerModal {
+  font-size: 22px;
+}
+.perct {
+    max-width:150px;
+}
+
+.altura {
+    max-width:150px;
+    margin-right: 25px;
+  
+     
+}
+.peso {
+    max-width:150px;
+}
+.cpf {
+    max-width:250px;
+}
+
+.email {
+   
+    max-width:300px;
+}
+
+.btngroup {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  flex-grow: 3;
+  
+ 
+}
+.btnSalvar {
+  width: 120px;
+  height: 50px;
+  margin-left: 25px;
+  
+  
+  
+}
+
+.btnCancelar {
+  width: 120px;
+  height: 50px;
+  background-color: darkgray;
+}
