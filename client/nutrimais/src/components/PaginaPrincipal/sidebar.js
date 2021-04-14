@@ -6,7 +6,9 @@ import IconPaciente from "../../assets/btn-client.png";
 import IconAgenda from "../../assets/agenda.png";
 import IconDashBoard from "../../assets/dashboards.png";
 
-export default function sidebar() {
+import { Link } from "react-router-dom";
+
+export default function sidebar(props) {
   return (
     <>
       <div className="sideBar">
@@ -15,31 +17,40 @@ export default function sidebar() {
         </div>
 
         <Nav className="navs">
-          <Nav.Link className="item">
+          <Link className="item" to="/">
             <div className="itemContent">
               <Image className="itemIcon" src={IconHome} />
             </div>
             Pagina Inicial
-          </Nav.Link>
+          </Link>
 
-          <Nav.Link className="item">
+            
+            <Link className="item" to="/Paciente">
             <div className="itemContent">
               <Image className="itemIcon" src={IconPaciente} />
             </div>
-            Paciente
-          </Nav.Link>
-          <Nav.Link className="item">
+              Paciente
+            </Link>
+         
+
+         
+            
+            <Link className="item" to="">
             <div className="itemContent">
               <Image className="itemIcon" src={IconAgenda} />
             </div>
-            Agenda
-          </Nav.Link>
-          <Nav.Link className="item">
+              Agenda
+            </Link>
+          
+            
+
+            <Link className="item" to="">
             <div className="itemContent">
               <Image className="itemIcon" src={IconDashBoard} />
             </div>
-            DashBoard
-          </Nav.Link>
+              DashBoard
+            </Link>
+         
         </Nav>
       </div>
     </>

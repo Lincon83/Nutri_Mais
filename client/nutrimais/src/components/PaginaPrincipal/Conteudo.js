@@ -1,13 +1,13 @@
 import React from "react";
 import "./Conteudo.css";
 
-export default function Conteudo() {
+export default function Conteudo(props) {
   return (
     <>
       <div className="main">
         <header className="header">
           <div className="titulo">
-            <h2>Pagina do principal</h2>
+            <h2>{props.titulo}</h2>
             <h6>
               Veja suas próximas consultas e informações sobre a sua ativide
             </h6>

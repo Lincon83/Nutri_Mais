@@ -1,28 +1,37 @@
-import React from "react";
-import { Table,Button} from "react-bootstrap";
+import React,{useState} from "react";
+import { Table, Button, Form } from "react-bootstrap";
 import "./pacientePrincipal.css";
+import CadastroPaciente from "./CadastroPaciente"
 
 export default function PacientesPrincipal() {
+
+ 
+
+  
   return (
     <>
-      <div>
+    <CadastroPaciente btn={false}/>
+      <div className="principal">
         <div>
-          <div>
+          <div className="tituloPac">
             <h2>Registro de Pacientes</h2>
           </div>
-          <div className="btns">
-          <Button>
-              Castrar
-          </Button>
-          <Button>
-              Excluir
-          </Button>
-          <Button>
-              Alterar
-          </Button>
 
+          <Form className="formPesquisa">
+            <Form.Group controlId="formBasicEmail">
+              
+              <Form.Control className="pesquisa" type="text" placeholder="Enter email" />
+             
+            </Form.Group>
+          <Button variant="info">Pesquisa</Button>
+          </Form>
+          <div className="btns">
+            <Button className="btnCad" onClick={()=><CadastroPaciente btn={true}/>} >
+            Cadastrar</Button>
+            <Button className="btnExc">Excluir</Button>
+            <Button className="btnAlt">Alterar</Button>
           </div>
-          <div>
+          <div className="tbContainer">
             <Table className="tabela" striped bordered hover size="sm">
               <thead className="tbheader">
                 <tr>

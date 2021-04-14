@@ -1,14 +1,56 @@
-.tabela{
-  width: 82%; 
-  margin-top: 150px; 
-  margin-left: auto;
+.principal {
+ 
+  width: 82%;
+  margin: 0 auto;
+  margin-top: 15px;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  background-color:#fffef9
+   
+ 
+}
+
+.tituloPac{
+  margin-top: 20px;
+  margin-left: 20px;
+  
+}
+.tbContainer {
+  width: 100%;
+  
+}
+.tabela {
+  flex-grow: 1 1 auto;
+  width: 82%;
+  margin-left: 20px;
+  margin-top: 80px;
+  width: 96%;
+
   margin-right: auto;
-
 }
 
-.tbheader{
-
-    background-color: #4852D0;
-    color: white;
+.tbheader {
+  background-color: #4852d0;
+  color: white;
 }
 
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.btnCad{
+margin-right: 90px;
+}
+
+.btnExc{
+  margin-right: 80px;
+}
+
+.btnAlt{
+  margin-right: 50px;
+}

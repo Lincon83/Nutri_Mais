@@ -1,17 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/PaginaPrincipal/header";
-import SideBar from "./components/PaginaPrincipal/sidebar";
-import Conteudo from "./components/pacientes/pacientesPrincipal";
-import Cad from "./components/pacientes/CadastroPaciente"
+
+import Paciente from "./components/pacientes/pacientesPrincipal";
+import PaginaInicial from "./components/PaginaPrincipal/Conteudo";
+import Cad from "./components/pacientes/CadastroPaciente";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Sidebar from "./components/PaginaPrincipal/sidebar"
+
+
 
 function App() {
   return (
     <div className="App">
-      <SideBar/>
-      <Header />
-      <Conteudo />
+    
+     
+
+      <Router>
+     
+      <Sidebar />
       <Cad></Cad>
+      <Header />
+      
+        <Switch>
+          <Route exact path="/">
+            <PaginaInicial titulo="Pagina do Profissional"/>
+          </Route>
+          <Route exact path="/Paciente">
+          <PaginaInicial titulo="Pacientes"/>
+            <Paciente />
+          
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
