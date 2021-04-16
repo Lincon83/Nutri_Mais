@@ -18,7 +18,7 @@ export default function Conteudo(props) {
           </div>
         </header>
       </div>
-     <Conteudo_Main/>
+
     </>
   );
 }
