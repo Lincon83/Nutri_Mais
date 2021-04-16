@@ -1,5 +1,6 @@
 import React from "react";
 import "./Conteudo.css";
+import Conteudo_Main from "./Conteudo_Main";
 
 export default function Conteudo(props) {
   return (
@@ -17,6 +18,7 @@ export default function Conteudo(props) {
           </div>
         </header>
       </div>
+     <Conteudo_Main/>
     </>
   );
 }
