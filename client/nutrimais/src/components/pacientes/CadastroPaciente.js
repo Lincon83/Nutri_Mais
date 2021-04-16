@@ -1,5 +1,5 @@
 import  "./styledCadPaciente.css"
-import React,{useEffect, useState} from "react"
+import React,{useEffect, useRef, useState} from "react"
 import { Button, Form, Modal } from "react-bootstrap";
 
 /*
@@ -12,15 +12,16 @@ caso nao mandar um alert
 
 export default function CadastroPaciente(props) {
 
+ 
 const [CloseModal,setCloseModal]=useState(false);
 
-const handleClose = () => setCloseModal(false);
-  // const handleShow = () => setCloseModal(true);
+const handleClose = () => setCloseModal(true);
+  // 
  
   return (
     <div className="modal">
       
-        <Modal show={props.btn}  size="lg"   centered animation={true} onHide={handleClose}> 
+        <Modal  size="lg" show={props.btn}  centered animation={true} onHide={props.close}> 
           <Modal.Header  closeButton={handleClose} className="headerModal">Cadastro de Pacientes</Modal.Header>
 
           <Modal.Body  >

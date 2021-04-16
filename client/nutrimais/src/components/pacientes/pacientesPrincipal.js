@@ -1,16 +1,13 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Table, Button, Form } from "react-bootstrap";
 import "./pacientePrincipal.css";
-import CadastroPaciente from "./CadastroPaciente"
+import CadastroPaciente from "./CadastroPaciente";
 
 export default function PacientesPrincipal() {
+  const [visible, setvisible] = useState(false);
 
- 
-
-  
   return (
     <>
-    <CadastroPaciente btn={false}/>
       <div className="principal">
         <div>
           <div className="tituloPac">
@@ -19,15 +16,23 @@ export default function PacientesPrincipal() {
 
           <Form className="formPesquisa">
             <Form.Group controlId="formBasicEmail">
-              
-              <Form.Control className="pesquisa" type="text" placeholder="Enter email" />
-             
+              <Form.Control
+                className="pesquisa"
+                type="text"
+                placeholder="Enter email"
+              />
             </Form.Group>
-          <Button variant="info">Pesquisa</Button>
+            <Button variant="info">Pesquisa</Button>
           </Form>
           <div className="btns">
-            <Button className="btnCad" onClick={()=><CadastroPaciente btn={true}/>} >
-            Cadastrar</Button>
+            <Button className="btnCad" onClick={() => setvisible(true)}>
+              {visible ? (
+                <CadastroPaciente btn={true} close={() => setvisible(false)} />
+              ) : null}
+              {visible ? <CadastroPaciente close={false} /> : null}
+              Cadastrar
+            </Button>
+            <CadastroPaciente />
             <Button className="btnExc">Excluir</Button>
             <Button className="btnAlt">Alterar</Button>
           </div>
