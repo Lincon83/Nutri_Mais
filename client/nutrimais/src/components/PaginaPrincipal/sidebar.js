@@ -35,7 +35,7 @@ export default function sidebar(props) {
 
          
             
-            <Link className="item" to="">
+            <Link className="item" to="/Agenda">
             <div className="itemContent">
               <Image className="itemIcon" src={IconAgenda} />
             </div>
@@ -44,7 +44,7 @@ export default function sidebar(props) {
           
             
 
-            <Link className="item" to="">
+            <Link className="item" to="/DashBoard">
             <div className="itemContent">
               <Image className="itemIcon" src={IconDashBoard} />
             </div>

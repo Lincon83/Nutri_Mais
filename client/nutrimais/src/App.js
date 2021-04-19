@@ -7,15 +7,17 @@ import Cad from "./components/pacientes/CadastroPaciente";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Sidebar from "./components/PaginaPrincipal/sidebar"
 import Login from "./components/login/main"
+import Agenda from "./components/agenda/agenda"
+import DashBoard from "./components/DashBoard/dashboard"
 
 
 function App() {
   return (
     <div className="App">
 
-
-      <Login />
-      {/* <Router>
+    
+      {/* <Login /> */}
+      <Router>
 
         <Sidebar />
         <Cad></Cad>
@@ -28,10 +30,19 @@ function App() {
           <Route exact path="/Paciente">
             <PaginaInicial titulo="Pacientes" />
             <Paciente />
-
+          
           </Route>
+          <Route exact path="/Agenda">
+            <PaginaInicial titulo="Agenda" />
+            <Agenda/>
+          </Route>
+          <Route exact path="/DashBoard">
+            <PaginaInicial titulo="DashBoard" />
+            <DashBoard/>
+          </Route>
+          
         </Switch>
-      </Router> */}
+      </Router>
     </div>
   );
 }
